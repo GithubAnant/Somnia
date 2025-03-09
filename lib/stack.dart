@@ -51,7 +51,7 @@ class StackSomnia extends StatelessWidget {
                 )
               ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 1.0, vertical: 7),
               child: Text(
                 'Submit',
                 style: TextStyle(
