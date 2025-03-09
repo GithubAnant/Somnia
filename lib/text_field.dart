@@ -13,7 +13,7 @@ class TextFieldSomnia extends StatelessWidget {
       maxLines: 13,
       
       style: TextStyle(
-        fontSize: 13,
+        fontSize: 11,
         fontFamily: 'Montserrat'
       ),
       
