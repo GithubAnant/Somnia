@@ -1,16 +1,10 @@
-# somnia_server
+# Somnia
 
-A new Flutter project.
+Somnia is a platform where you can read fascinating dreams shared by others and anonymously post your own wildest, strangest, or most memorable dreams. Dive into a world of surreal experiences, unexpected stories, and curious minds — all without revealing your identity. Dreams are meant to be shared, so why keep yours to yourself?
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
