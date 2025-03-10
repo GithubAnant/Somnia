@@ -101,6 +101,24 @@ flutter:
           weight: 600
         - asset: assets/fonts/Montserrat-Thin.ttf
           weight: 100
+          
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Lato-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lato-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Lato-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Lato-Light.ttf
+          weight: 300
+
 
   #
   # For details regarding fonts from package dependencies,

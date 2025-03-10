@@ -17,13 +17,14 @@ class SubmitButton extends StatelessWidget {
 
       child: Container(
         decoration: BoxDecoration(
-gradient: LinearGradient(
-  colors: [Color.fromARGB(255, 1, 62, 79), Color.fromARGB(255, 1, 35, 75)],
-  begin: Alignment.topLeft,
-  end: Alignment.bottomRight,
-)
-
-,
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 1, 62, 79),
+              Color.fromARGB(255, 1, 35, 75),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
           borderRadius: BorderRadius.circular(
             radiusButton,
           ), // match the radius of button and container
@@ -41,21 +42,31 @@ gradient: LinearGradient(
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
+
+
               Padding(
                 padding: const EdgeInsets.only(top: 5, bottom: 5, right: 8),
                 child: Text(
-                  'Submit',
+                  'Post',
                   style: TextStyle(
-                    color: buttonColor ,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w300,
                     fontSize: 18,
-                    fontFamily: 'Times New Roman',
+                    color: buttonColor,
                   ),
                 ),
               ),
+              
+
+
               Icon(
-                Icons.near_me_outlined, 
+                Icons.near_me_outlined,
                 color: buttonColor,
-                size: 20,),
+                size: 20,
+                weight: 100,
+              ),
+
+
             ],
           ),
         ),

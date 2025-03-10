@@ -11,6 +11,8 @@ class TextFieldSomnia extends StatelessWidget {
     return TextField(
       minLines: 1,
       maxLines: 13,
+      keyboardType: TextInputType.text,
+      
       
       style: TextStyle(
         fontSize: 11,
@@ -32,9 +34,7 @@ class TextFieldSomnia extends StatelessWidget {
         filled: true,
         fillColor: Colors.white,
     
-    
-    
-    
+
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(0),
           borderSide: BorderSide(
