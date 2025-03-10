@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/sample_data.dart';
-import 'package:somnia/submit_button.dart';
-import 'package:somnia/text_field.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class StackSomniaRead extends StatelessWidget {

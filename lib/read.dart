@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/appbar_button.dart';
-import 'package:somnia/home_page.dart';
+import 'package:somnia/write.dart';
 import 'package:somnia/stack_read.dart';
 
 class Read extends StatefulWidget {
@@ -13,6 +13,9 @@ class Read extends StatefulWidget {
 class _ReadState extends State<Read> {
   Color readButtonColor = const Color.fromARGB(255, 255, 255, 255);
   Color writeButtonColor = const Color.fromARGB(255, 115, 115, 115);
+
+  bool activeButtonWrite = false;
+  bool activeButtonRead = true;
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +33,21 @@ class _ReadState extends State<Read> {
             AppBarButton(
               buttonName: 'Write a dream',
               buttonColor: writeButtonColor,
-              destination: Background(),
+              destination: Write(),
             ),
 
             AppBarButton(
               buttonName: 'Dream Vault',
               buttonColor: readButtonColor,
-              destination: Read(),
+              destination: NullWidget(),
             ),
           ],
         ),
         centerTitle: true,
       ),
+
+
+      drawer: Drawer(),
 
       body: SafeArea(
         minimum: EdgeInsets.zero,
@@ -50,5 +56,17 @@ class _ReadState extends State<Read> {
         ),
       ),
     );
+  }
+}
+
+
+
+class NullWidget extends StatelessWidget {
+  const NullWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    Navigator.pop(context);
+    return const SizedBox.shrink();
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:somnia/home_page.dart';
+import 'package:somnia/write.dart';
 
 void main(){
   runApp(Somnia());
@@ -13,7 +13,7 @@ class Somnia extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: Background(),
+      home: Write(),
     );
   }
 }

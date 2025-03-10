@@ -3,14 +3,14 @@ import 'package:somnia/appbar_button.dart';
 import 'package:somnia/read.dart';
 import 'package:somnia/stack_write.dart';
 
-class Background extends StatefulWidget {
-  const Background({super.key});
+class Write extends StatefulWidget {
+  const Write({super.key});
 
   @override
-  State<Background> createState() => _BackgroundState();
+  State<Write> createState() => _WriteState();
 }
 
-class _BackgroundState extends State<Background> {
+class _WriteState extends State<Write> {
 
   @override
   void initState() {
@@ -18,8 +18,7 @@ class _BackgroundState extends State<Background> {
   }
 
   bool activeButtonWrite = true;
-
-  
+  bool activeButtonRead = false;
 
   Color writeButtonColor = const Color.fromARGB(255, 255, 255, 255);
   Color readButtonColor = const Color.fromARGB(255, 115, 115, 115);
@@ -37,7 +36,7 @@ class _BackgroundState extends State<Background> {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            AppBarButton(buttonName: 'Write a dream',buttonColor: writeButtonColor,destination: Background(),),
+            AppBarButton(buttonName: 'Write a dream',buttonColor: writeButtonColor,destination: Write(),),
             AppBarButton(buttonName: 'Dream Vault',buttonColor: readButtonColor, destination: Read(),),
           ],
         ),
