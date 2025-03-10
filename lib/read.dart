@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:somnia/appbar_button.dart';
 import 'package:somnia/write.dart';
@@ -11,19 +12,17 @@ class Read extends StatefulWidget {
 }
 
 class _ReadState extends State<Read> {
-  Color readButtonColor = const Color.fromARGB(255, 255, 255, 255);
-  Color writeButtonColor = const Color.fromARGB(255, 115, 115, 115);
-
-  bool activeButtonWrite = false;
-  bool activeButtonRead = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.menu),
+          color: Colors.white,
+        ),
         surfaceTintColor: const Color.fromARGB(255, 0, 0, 0),
         backgroundColor: const Color.fromARGB(0, 0, 0, 0),
         elevation: 0,
@@ -32,41 +31,29 @@ class _ReadState extends State<Read> {
           children: [
             AppBarButton(
               buttonName: 'Write a dream',
-              buttonColor: writeButtonColor,
-              destination: Write(),
+              buttonColor: const Color.fromARGB(255, 115, 115, 115),
+              destination: const Write(),
+              isActive: false,
             ),
 
             AppBarButton(
               buttonName: 'Dream Vault',
-              buttonColor: readButtonColor,
-              destination: NullWidget(),
+              buttonColor: Colors.white,
+              destination: const Read(),
+              isActive: true,
             ),
           ],
         ),
         centerTitle: true,
       ),
 
+      drawer: const Drawer(),
 
-      drawer: Drawer(),
-
-      body: SafeArea(
+      body: const SafeArea(
         minimum: EdgeInsets.zero,
-        child: StackSomniaRead(
-          
-        ),
+        child: StackSomniaRead(),
       ),
     );
   }
 }
 
-
-
-class NullWidget extends StatelessWidget {
-  const NullWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    Navigator.pop(context);
-    return const SizedBox.shrink();
-  }
-}
