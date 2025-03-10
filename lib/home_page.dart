@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/appbar_button.dart';
 import 'package:somnia/read.dart';
-import 'package:somnia/stack.dart';
+import 'package:somnia/stack_write.dart';
 
 class Background extends StatefulWidget {
   const Background({super.key});
@@ -11,10 +11,18 @@ class Background extends StatefulWidget {
 }
 
 class _BackgroundState extends State<Background> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   bool activeButtonWrite = true;
 
-  Color activeButtonColor = Colors.white;
-  Color inActiveButtonColor = const Color.fromARGB(255, 115, 115, 115);
+  
+
+  Color writeButtonColor = const Color.fromARGB(255, 255, 255, 255);
+  Color readButtonColor = const Color.fromARGB(255, 115, 115, 115);
 
   void nothing() {}
 
@@ -23,19 +31,20 @@ class _BackgroundState extends State<Background> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        leading: IconButton(onPressed:(){}, icon:  Icon(Icons.menu), color: Colors.white),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         elevation: 0,
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            AppBarButton(buttonName: 'Write',buttonColor: activeButtonColor,destination: Background(),),
-            AppBarButton(buttonName: 'Read',buttonColor: inActiveButtonColor, destination: Read(),),
+            AppBarButton(buttonName: 'Write a dream',buttonColor: writeButtonColor,destination: Background(),),
+            AppBarButton(buttonName: 'Dream Vault',buttonColor: readButtonColor, destination: Read(),),
           ],
         ),
         centerTitle: true,
       ),
 
-      body: StackSomnia(),
+      body: StackSomniaWrite(),
     );
   }
 }

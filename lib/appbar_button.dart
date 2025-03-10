@@ -20,7 +20,7 @@ class AppBarButton extends StatelessWidget {
           side: BorderSide(color: Colors.transparent)
         ),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => destination));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => destination));
         },
         child: Text(buttonName, style: TextStyle(color: buttonColor)),
       ),

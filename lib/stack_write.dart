@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:somnia/submit_button.dart';
 import 'package:somnia/text_field.dart';
 
-class StackSomnia extends StatelessWidget {
-  const StackSomnia({super.key});
+class StackSomniaWrite extends StatelessWidget {
+  const StackSomniaWrite({super.key});
 
   void nothing() {}
 
   @override
   Widget build(BuildContext context) {
     return Stack(
+      
       children: [
         Positioned.fill(
           child: Image.asset(
