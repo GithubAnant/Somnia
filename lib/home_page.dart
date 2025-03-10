@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/appbar_button.dart';
+import 'package:somnia/read.dart';
 import 'package:somnia/stack.dart';
 
 class Background extends StatefulWidget {
@@ -11,6 +12,10 @@ class Background extends StatefulWidget {
 
 class _BackgroundState extends State<Background> {
   bool activeButtonWrite = true;
+
+  Color activeButtonColor = Colors.white;
+  Color inActiveButtonColor = const Color.fromARGB(255, 115, 115, 115);
+
   void nothing() {}
 
   @override
@@ -23,8 +28,8 @@ class _BackgroundState extends State<Background> {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            AppBarButton(buttonName: 'Write'),
-            AppBarButton(buttonName: 'Read'),
+            AppBarButton(buttonName: 'Write',buttonColor: activeButtonColor,destination: Background(),),
+            AppBarButton(buttonName: 'Read',buttonColor: inActiveButtonColor, destination: Read(),),
           ],
         ),
         centerTitle: true,
