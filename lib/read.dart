@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:somnia/appbar_button.dart';
+import 'package:somnia/drawer_sidebar.dart';
 import 'package:somnia/write.dart';
 import 'package:somnia/stack_read.dart';
 
@@ -18,10 +19,16 @@ class _ReadState extends State<Read> {
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.menu),
-          color: Colors.white,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: const Icon(Icons.menu),
+              color: Colors.white,
+            );
+          }
         ),
         surfaceTintColor: const Color.fromARGB(255, 0, 0, 0),
         backgroundColor: const Color.fromARGB(0, 0, 0, 0),
@@ -47,7 +54,7 @@ class _ReadState extends State<Read> {
         centerTitle: true,
       ),
 
-      drawer: const Drawer(),
+      drawer: DrawerSidebar(),
 
       body: const SafeArea(
         minimum: EdgeInsets.zero,
