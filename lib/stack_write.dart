@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/submit_button.dart';
 import 'package:somnia/text_field.dart';
+import 'dart:math';
 
-class StackSomniaWrite extends StatelessWidget {
+class StackSomniaWrite extends StatefulWidget {
   const StackSomniaWrite({super.key});
 
+  @override
+  State<StackSomniaWrite> createState() => _StackSomniaWriteState();
+}
+
+class _StackSomniaWriteState extends State<StackSomniaWrite> {
   void nothing() {}
+
+    final List<IconData> icons = [
+    Icons.person,
+    Icons.person_2,
+    Icons.person_3,
+    Icons.person_4,
+  ];
+
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
