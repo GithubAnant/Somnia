@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/sample_data.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:somnia/stack_write.dart';
+import 'package:somnia/write.dart';
 
 class StackSomniaRead extends StatelessWidget {
   const StackSomniaRead({super.key});
@@ -14,7 +16,6 @@ class StackSomniaRead extends StatelessWidget {
     if (kIsWeb) {
       widthCard = 0.5;
     }
-
 
     return Stack(
       children: [
@@ -47,6 +48,36 @@ class StackSomniaRead extends StatelessWidget {
               ),
             ),
           ],
+        ),
+
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Container(
+            margin: EdgeInsets.only(bottom: 14, right: 14),
+            child: FloatingActionButton.extended(
+              hoverColor: const Color.fromARGB(255, 34, 34, 34),
+              backgroundColor: Colors.black,
+              foregroundColor: Colors.white,
+              isExtended: true,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Write()));
+              },
+              label: Row(
+                children: [
+                  Icon(Icons.add, size: 22,),
+                  Text(
+                    ' Add your own',
+                    style: TextStyle(
+                      fontFamily: 'Lato',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16
+                    ),),
+                ],
+              ),
+              
+            ),
+          ),
         ),
       ],
     );
@@ -109,7 +140,6 @@ class DreamCard extends StatelessWidget {
     );
   }
 }
-
 
 class HeaderText extends StatelessWidget {
   const HeaderText({super.key});

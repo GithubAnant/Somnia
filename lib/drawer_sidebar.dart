@@ -54,7 +54,7 @@ class DrawerSidebar extends StatelessWidget {
                     icon: FaIcon(FontAwesomeIcons.github, color: Colors.white),
                   ),
 
-                  Text('  GithubAnant', style: TextStyle(color: Colors.white)),
+                  Text(' GithubAnant  ', style: TextStyle(color: Colors.white)),
                 ],
               ),
             ),
