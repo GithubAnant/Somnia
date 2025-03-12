@@ -18,6 +18,7 @@ class DrawerSidebar extends StatelessWidget {
       backgroundColor: Color.fromRGBO(0, 0, 0, 0.827),
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               margin: EdgeInsets.only(top: 26, bottom: 8, left: 8, right: 8),
@@ -58,6 +59,8 @@ class DrawerSidebar extends StatelessWidget {
                 ],
               ),
             ),
+            Text('(Click on the logo to open links)', 
+            style: TextStyle(color: const Color.fromARGB(255, 115, 114, 114)),)
           ],
         ),
       ),
