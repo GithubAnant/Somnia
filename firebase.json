@@ -1,6 +1,1 @@
-{
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  }
-}
+{"firestore":{"rules":"firestore.rules","indexes":"firestore.indexes.json"},"flutter":{"platforms":{"android":{"default":{"projectId":"somnia-123","appId":"1:687319018874:android:30eb46824469dec65bfac3","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"somnia-123","appId":"1:687319018874:ios:3e39179e5d4ce5d95bfac3","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"macos":{"default":{"projectId":"somnia-123","appId":"1:687319018874:ios:3e39179e5d4ce5d95bfac3","uploadDebugSymbols":false,"fileOutput":"macos/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"somnia-123","configurations":{"android":"1:687319018874:android:30eb46824469dec65bfac3","ios":"1:687319018874:ios:3e39179e5d4ce5d95bfac3","macos":"1:687319018874:ios:3e39179e5d4ce5d95bfac3","web":"1:687319018874:web:bcfdb89e6fff5d4c5bfac3","windows":"1:687319018874:web:c25e3935ce6e19a05bfac3"}}}}}}

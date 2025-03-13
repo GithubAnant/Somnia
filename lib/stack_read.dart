@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/sample_data.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:somnia/stack_write.dart';
 import 'package:somnia/write.dart';
 
 class StackSomniaRead extends StatelessWidget {
