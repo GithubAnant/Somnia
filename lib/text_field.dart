@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
+
 class TextFieldSomnia extends StatelessWidget {
   const TextFieldSomnia({
-    super.key,
+    super.key, required this.controller,
   });
+  
+  final TextEditingController controller;
+
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       minLines: 1,
       maxLines: 13,
       keyboardType: TextInputType.text,
-      
       
       style: TextStyle(
         fontSize: 11,
@@ -26,9 +30,9 @@ class TextFieldSomnia extends StatelessWidget {
           padding: const EdgeInsets.only(left: 14.0, right: 6),
           child: Icon(Icons.bedtime_outlined, color:  const Color.fromARGB(137, 158, 152, 152),),
         ),
-        hintText: 'Write about year dreams here....',
+        hintText: 'Write about year dreams here....(minimum 50 words)',
         hintStyle: TextStyle(
-          color: const Color.fromARGB(137, 158, 152, 152)
+          color: const Color.fromARGB(175, 118, 115, 115)
         ),
         filled: true,
         fillColor: Colors.white,
@@ -44,7 +48,6 @@ class TextFieldSomnia extends StatelessWidget {
         ),
     
     
-    
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(0),
           borderSide: BorderSide(
@@ -55,6 +58,7 @@ class TextFieldSomnia extends StatelessWidget {
         ),
     
     
+
     
       ),
     );

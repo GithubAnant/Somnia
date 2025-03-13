@@ -28,6 +28,8 @@ class StackSomniaRead extends StatelessWidget {
 
         Column(
           children: [
+
+            
             HeaderText(),
 
             Expanded(

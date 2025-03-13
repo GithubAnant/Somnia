@@ -22,6 +22,10 @@ class _WriteState extends State<Write> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
+
+
+
+      // APPBAR
       appBar: AppBar(
         leading: Builder(
           builder: (context) {
@@ -58,8 +62,11 @@ class _WriteState extends State<Write> {
         centerTitle: true,
       ),
 
+
+      // SIDEBAR
       drawer: DrawerSidebar(),
 
+      // STACK
       body: const StackSomniaWrite(),
     );
   }

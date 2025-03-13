@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 import 'package:somnia/submit_button.dart';
 import 'package:somnia/text_field.dart';
@@ -14,12 +16,22 @@ class _StackSomniaWriteState extends State<StackSomniaWrite> {
 
 
 
+
   final TextEditingController _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller.dispose(); // Dispose to prevent memory leaks
+    super.dispose();
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       
+      /// BACKGROUND IMAGE
       children: [
         Positioned.fill(
           child: Image.asset(
@@ -32,6 +44,7 @@ class _StackSomniaWriteState extends State<StackSomniaWrite> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
               // HERO TEXT
               Text(
                 'Somnia. Share your wildest dreams.',
@@ -49,15 +62,14 @@ class _StackSomniaWriteState extends State<StackSomniaWrite> {
               // TEXT FIELD
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.7,
-                child: TextFieldSomnia(),
+                child: TextFieldSomnia(controller: _controller,),
               ),
 
               // gap
               SizedBox(height: MediaQuery.of(context).size.height * 0.019),
 
-
               // Submit Button
-              SubmitButton()
+              SubmitButton(controller: _controller,)
             ],
           ),
         ),
