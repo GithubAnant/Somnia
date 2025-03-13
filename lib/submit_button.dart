@@ -16,7 +16,7 @@ class SubmitButton extends StatelessWidget {
   await audioPlayer.resume();
 }
 
-  Future<void> addDream() async {
+  Future<void> addDream(BuildContext context) async {
     if (controller.text.length >= 50) {
     await FirebaseFirestore.instance.collection('dreams').add({
       'text': controller.text,
@@ -26,7 +26,13 @@ class SubmitButton extends StatelessWidget {
 
       controller.clear();
       _playSound();
-    }
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Dream added successfully!'),
+        duration: Duration(seconds: 2),
+        backgroundColor: Colors.green,
+      ),
+    );    }
   }
 
 
@@ -70,7 +76,7 @@ class SubmitButton extends StatelessWidget {
         //// BUTTON
         child: TextButton(
           onPressed: () {
-            addDream();
+            addDream(context);
           },
           style: TextButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 20),
