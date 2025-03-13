@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:somnia/sample_data.dart';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -28,7 +28,6 @@ class SubmitButton extends StatelessWidget {
       _playSound();
     }
   }
-
 
 
   final double radiusButton = 6;

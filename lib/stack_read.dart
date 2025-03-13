@@ -1,5 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:somnia/sample_data.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:somnia/write.dart';
 
@@ -32,25 +32,44 @@ class StackSomniaRead extends StatelessWidget {
             
             HeaderText(),
 
-            Expanded(
-              child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                itemCount: sampleDreams.length,
-                itemBuilder: (context, index) {
-                  final dream = sampleDreams[index];
-                  return Container(
-                    margin: EdgeInsets.symmetric(vertical: 5),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: DreamCard(widthCard: widthCard, dream: dream),
-                    ),
-                  );
-                },
-              ),
+
+
+            StreamBuilder(
+              stream: FirebaseFirestore.instance.collection('dreams').snapshots(),
+              builder: (context, snapshot){
+
+                if (!snapshot.hasData) {
+                  return Center(child: CircularProgressIndicator()); 
+                }
+                
+
+                var dreams = snapshot.data!.docs;
+
+                return Expanded(
+                  child: ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  itemCount: dreams.length,
+                  itemBuilder: (context, index) {
+                    var dream = dreams[index];
+                    return Container(
+                      margin: EdgeInsets.symmetric(vertical: 5),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: DreamCard(widthCard: widthCard, dream: dream,),
+                      ),
+                    );
+                  },
+                                ),
+                );
+
+
+              }
             ),
           ],
         ),
 
+
+      // FAB
         Align(
           alignment: Alignment.bottomRight,
           child: Container(
@@ -85,13 +104,14 @@ class StackSomniaRead extends StatelessWidget {
   }
 }
 
+
 class DreamCard extends StatelessWidget {
   const DreamCard({super.key, required this.widthCard, required this.dream});
 
   final double widthCard;
-  final Map<String, dynamic> dream;
+  final QueryDocumentSnapshot<Map<String, dynamic>> dream;
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Card(
       color: Colors.transparent,
@@ -141,6 +161,11 @@ class DreamCard extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
 
 class HeaderText extends StatelessWidget {
   const HeaderText({super.key});
