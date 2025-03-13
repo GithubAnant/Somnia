@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:somnia/sample_data.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 
 class SubmitButton extends StatelessWidget {
   SubmitButton({super.key, required this.controller});
@@ -14,19 +16,20 @@ class SubmitButton extends StatelessWidget {
   await audioPlayer.resume();
 }
 
+  Future<void> addDream() async {
+    if (controller.text.length >= 50) {
+    await FirebaseFirestore.instance.collection('dreams').add({
+      'text': controller.text,
+      'status': 'approved',  
+      'timestamp': FieldValue.serverTimestamp(),
+    });
 
-  void addData() {
-    if (controller.text.length >= 100) {
-      sampleDreams.add({'text': controller.text, 'status': 'approved'});
       controller.clear();
       _playSound();
     }
-    // else{
-
-    // }
   }
 
-  
+
 
   final double radiusButton = 6;
   final Color buttonColor = const Color.fromARGB(255, 229, 227, 227);
@@ -67,7 +70,9 @@ class SubmitButton extends StatelessWidget {
 
         //// BUTTON
         child: TextButton(
-          onPressed: addData,
+          onPressed: () {
+            addDream();
+          },
           style: TextButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 20),
             shape: RoundedRectangleBorder(
