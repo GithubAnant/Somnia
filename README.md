@@ -1,11 +1,60 @@
-# Somnia - Share Your Wildest Dreams
+md
+Copy
+Edit
+# 🌙 Somnia - Share Your Wildest Dreams  
 
-Somnia is an anonymous dream-sharing app built with Flutter. Users can write and read dreams without logging in. 
-<img width="1465" alt="image" src="https://github.com/user-attachments/assets/7c13caef-3ba7-4d30-9a71-3232d0d0ded8" />
-<img width="1469" alt="image" src="https://github.com/user-attachments/assets/2126cf2e-a5fd-4880-9967-0d2abd477d5a" />
+Somnia is an anonymous dream-sharing app built with Flutter. Users can type and post their dreams, which are visible to everyone in the 'Read' tab. Posts are reviewed before being published to keep the content clean. No login required—just open the app and start sharing.  
+
+---
+
+## ✨ Features  
+✅ **Anonymous Posting** – No account needed, just type and share  
+✅ **Read Others’ Dreams** – See what wild dreams others are having  
+✅ **Admin Moderation** – Posts go through approval before being published  
+✅ **Simple & Clean UI** – Minimalist, distraction-free design  
+
+---
+
+## 🛠️ Tech Stack  
+- **Flutter** (Frontend)  
+- **Firebase (Optional)** – For backend moderation  
+
+---
+
+## 🚀 Installation  
+
+### **Prerequisites**  
+- Install **Flutter**: [Flutter Setup Guide](https://flutter.dev/docs/get-started/install)  
+- Ensure you have an emulator or a connected device  
+
+### **Steps**  
+1. **Clone the repository:**  
+   ```sh
+   git clone https://github.com/GithubAnant/somnia.git
+   cd somnia
+**Install dependencies**:
+flutter pub get
+
+**Run the app**:
+flutter run
 
 
-- Flutter (Frontend)
-- Firebase (Backend)
-- Vercel (Hosting Web App)
+🤝 Contributing
+To contribute follow these steps:
+
+Fork the repository
+Create a new branch (git checkout -b feature-name)
+Commit your changes (git commit -m "Added new feature")
+Push the branch (git push origin feature-name)
+Open a Pull Request
+All contributions are welcome! 🚀
+
+📜 License
+Somnia is open-source and released under the MIT License. See the LICENSE file for details.
+
+📧 Contact
+For questions or suggestions, open an issue or reach out at [Email](anantsinghal444@gmail.com) | [LinkedIn](https://www.linkedin.com/in/anant-singhal-linkdn/)
+
+💭 "Some dreams deserves to be shared."
+
 
