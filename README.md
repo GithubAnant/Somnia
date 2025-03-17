@@ -49,12 +49,15 @@ Push the branch (git push origin feature-name)
 Open a Pull Request
 All contributions are welcome! 🚀
 
+
+
 📜 License
 Somnia is open-source and released under the MIT License. See the LICENSE file for details.
+
+
 
 📧 Contact
 For questions or suggestions, open an issue or reach out at [Email](anantsinghal444@gmail.com) | [LinkedIn](https://www.linkedin.com/in/anant-singhal-linkdn/)
 
-💭 "Some dreams deserves to be shared."
 
 
