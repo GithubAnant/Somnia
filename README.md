@@ -33,11 +33,14 @@ Somnia is an anonymous dream-sharing app built with Flutter. Users can type and 
    git clone https://github.com/GithubAnant/somnia.git
    cd somnia
 **Install dependencies**:
+```sh
 flutter pub get
+```
 
 **Run the app**:
+```sh
 flutter run
-
+```
 
 🤝 Contributing
 To contribute follow these steps:
