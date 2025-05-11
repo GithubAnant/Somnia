@@ -41,8 +41,6 @@ class StackSomniaRead extends StatelessWidget {
                 if (!snapshot.hasData) {
                   return Center(child: CircularProgressIndicator()); 
                 }
-                
-
                 var dreams = snapshot.data!.docs;
 
                 return Expanded(
@@ -59,7 +57,7 @@ class StackSomniaRead extends StatelessWidget {
                       ),
                     );
                   },
-                                ),
+                  ),
                 );
 
 
