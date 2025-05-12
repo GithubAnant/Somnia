@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:somnia/appbar_button.dart';
-import 'package:somnia/drawer_sidebar.dart';
-import 'package:somnia/read.dart';
-import 'package:somnia/stack_write.dart';
+import 'package:somnia/widgets/appbar_button.dart';
+import 'package:somnia/widgets/drawer_sidebar.dart';
+import 'package:somnia/screens/read.dart';
+import 'package:somnia/widgets/stack_write.dart';
 
 class Write extends StatefulWidget {
   const Write({super.key});

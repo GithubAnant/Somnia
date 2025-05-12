@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:somnia/appbar_button.dart';
-import 'package:somnia/drawer_sidebar.dart';
-import 'package:somnia/write.dart';
-import 'package:somnia/stack_read.dart';
+import 'package:somnia/widgets/appbar_button.dart';
+import 'package:somnia/widgets/drawer_sidebar.dart';
+import 'package:somnia/screens/write.dart';
+import 'package:somnia/widgets/stack_read.dart';
 
 class Read extends StatefulWidget {
   const Read({super.key});

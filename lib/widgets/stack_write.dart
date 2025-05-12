@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:somnia/submit_button.dart';
-import 'package:somnia/text_field.dart';
+import 'package:somnia/widgets/submit_button.dart';
+import 'package:somnia/widgets/text_field.dart';
 
 class StackSomniaWrite extends StatefulWidget {
   const StackSomniaWrite({super.key});

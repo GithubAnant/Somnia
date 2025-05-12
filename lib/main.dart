@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:somnia/firebase_options.dart';
-import 'package:somnia/write.dart';
+import 'package:somnia/constants/firebase_options.dart';
+import 'package:somnia/screens/write.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {

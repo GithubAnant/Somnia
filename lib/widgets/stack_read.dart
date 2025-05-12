@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:somnia/write.dart';
+import 'package:somnia/screens/write.dart';
 
 class StackSomniaRead extends StatelessWidget {
   const StackSomniaRead({super.key});
