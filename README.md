@@ -2,6 +2,9 @@
 
 Somnia is an anonymous dream-sharing app built with Flutter. Users can type and post their dreams, which are visible to everyone in the 'Read' tab. Posts are reviewed before being published to keep the content clean. No login required—just open the app and start sharing.  
 
+<p align="center">
+  <img src="demo.png" alt="Somnia Demo Image"/>
+</p>
 ---
 
 ## ✨ Features  
