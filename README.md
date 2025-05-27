@@ -18,7 +18,7 @@ Somnia is an anonymous dream-sharing app built with Flutter. Users can type and 
 
 ## 🛠️ Tech Stack  
 - **Flutter** (Frontend)  
-- **Firebase (Optional)** – For backend moderation  
+- **Firebase** – For backend moderation  
 
 ---
 
