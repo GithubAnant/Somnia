@@ -20,47 +20,73 @@ class DrawerSidebar extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.only(top: 26, bottom: 8, left: 8, right: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      _launchURL(
-                        'https://www.linkedin.com/in/anant-singhal-linkdn/',
-                      );
-                    },
-                    icon: FaIcon(
-                      FontAwesomeIcons.linkedin,
-                      color: Colors.white,
-                    ),
+            GestureDetector(
+              onTap: () {
+                _launchURL('https://www.linkedin.com/in/anant-singhal-linkdn/');
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 26,
+                    bottom: 8,
+                    left: 8,
+                    right: 8,
                   ),
-
-                  Text('Anant Singhal', style: TextStyle(color: Colors.white)),
-
-                ],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          _launchURL(
+                            'https://www.linkedin.com/in/anant-singhal-linkdn/',
+                          );
+                        },
+                        icon: FaIcon(
+                          FontAwesomeIcons.linkedin,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Anant Singhal',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
 
-            Container(
-              margin: EdgeInsets.all(8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      _launchURL('https://github.com/GithubAnant');
-                    },
-                    icon: FaIcon(FontAwesomeIcons.github, color: Colors.white),
-                  ),
+            GestureDetector(
+              onTap: () {
+                _launchURL('https://github.com/GithubAnant');
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Container(
+                  margin: EdgeInsets.all(8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          _launchURL('https://github.com/GithubAnant');
+                        },
+                        icon: FaIcon(
+                          FontAwesomeIcons.github,
+                          color: Colors.white,
+                        ),
+                      ),
 
-                  Text(' GithubAnant  ', style: TextStyle(color: Colors.white)),
-                ],
+                      Text(
+                        ' GithubAnant  ',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            Text('(Click on the logo to open links)', 
-            style: TextStyle(color: const Color.fromARGB(255, 115, 114, 114)),)
           ],
         ),
       ),
